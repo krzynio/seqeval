@@ -93,8 +93,8 @@ def check_consistent_length(y_true: List[List[str]], y_pred: List[List[str]]):
     len_true = list(map(len, y_true))
     len_pred = list(map(len, y_pred))
     is_list = set(map(type, y_true)) | set(map(type, y_pred))
-    if not is_list == {list}:
-        raise TypeError('Found input variables without list of list.')
+#     if not is_list == {list}:
+#         raise TypeError('Found input variables without list of list.')
 
     if len(y_true) != len(y_pred) or len_true != len_pred:
         message = 'Found input variables with inconsistent numbers of samples:\n{}\n{}'.format(len_true, len_pred)
